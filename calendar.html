@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,200;0,300;0,400;1,200&family=Nunito:ital,wght@0,200;0,300;1,400;1,600;1,700&family=Roboto:wght@100;300;500&display=swap"rel="stylesheet">
+    <link href='./node_modules/fullcalendar/main.css' rel='stylesheet' />
+    <script src='node_modules/fullcalendar/main.js'></script>
+    <link rel="stylesheet" href="./calendar.css">
+    <script src="https://kit.fontawesome.com/95aa99eaf8.js" crossorigin="anonymous"></script>
+    <title>calendar</title>
+</head>
+<body>
+
+        <aside>
+            <div class="aside-list">
+                <ul>
+
+                    <li>
+                        <span class="list-letters"><h1>Oryx</h1></span>
+                    </li>
+                    <li>
+                        <i class="fas fa-ellipsis-v"></i>
+                        <span class="list-letters"><a href="">Menu</a></span>
+                    </li>
+                    
+                    <li>
+                        <i class="fas fa-qrcode"></i>
+                        <span class="list-letters"><a href="">Scan</a></span>
+                    </li>
+                    <li>
+                        <i class="fas fa-user-alt"></i> 
+                        <span class="list-letters"><a href="">Personal</a></span>
+                    </li>
+                    <li>
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="list-letters"><a href="">Calendar</a></span>
+                    </li>
+                    <li class="help">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span class="list-letters"><a href="">Help</a></span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+    
+    <main>
+    
+    <section class="header">
+        
+        <div class="header-Name">
+            <i class="fas fa-calendar-alt"></i>
+            <h1>Calendar</h1>
+        </div>
+
+        <div class="container-input">
+            <div class="header-input">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="search" >
+            </div>
+            <i class="far fa-bell"></i>
+        </div>
+    </section>
+
+    <div id='calendar' class="Container-calendar" ></div>
+    
+    </main>
+
+    <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+      document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    selectable: true,
+    headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek,timeGridDay'
+    },
+    dateClick: function(info) {
+      alert('clicked ' + info.dateStr);
+    },
+    select: function(info) {
+      alert('selected ' + info.startStr + ' to ' + info.endStr);
+    }
+  });
+
+    calendar.render();
+    });
+
+
+    </script>
+</body>
+</html>

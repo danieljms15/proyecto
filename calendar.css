@@ -1,0 +1,250 @@
+:root {
+    --color-primario: #00b4d8;
+    --color-fondo: #e6eeee;
+    --color-claro: #fff;
+    --color-fondo2: #c7cfd4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+} 
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+aside {
+    width: 200px;
+    height: 100vh;
+    background-color: var(--color-claro);
+}
+
+.aside-list ul li {
+    width: 200px;
+    height: 45px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+} 
+
+.list-letters a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.list-letters h1 {
+    margin-left: 10px;
+}
+
+.fas {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.aside-list ul .help {
+    margin-top: 360px;
+}
+
+.list-letters a:hover {
+    color: var(--color-claro);
+}
+
+.aside-list ul li:hover {
+    background-color: var(--color-primario);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-fondo);
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-fondo2);
+}
+
+.header-Name {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+}
+
+.container-input {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.header-input {
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #bfc7cd;
+    margin-right: 10px;
+}
+
+.header-input input {
+    width: 100px;
+    height: 20px;
+    background-color: var(--color-fondo);
+    border: none;
+}
+
+.header-input input:focus {
+    outline: none;
+}
+
+.Container-calendar {
+    width: 900px;
+    height: 450px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 340px) and (min-width: 5px) {
+
+    .header {
+        justify-content: center;
+    }
+
+    .header-input {
+        margin-right: 0px;
+    }
+
+    .header-Name {
+        display: none;
+    }
+
+    .container-input .fa-plus-circle {
+        display: none;
+    }
+
+    .container-input .fa-bell {
+        display: none;
+    }
+
+    aside {
+        display: none;
+    }
+
+    .Container-calendar {
+        width: 270px;
+    }
+
+    .fc .fc-toolbar.fc-header-toolbar {
+        flex-direction: column;
+      }
+    
+      .fc .fc-toolbar-title {
+        margin-top: 5px;
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: black;
+      }
+    
+      .fc .fc-col-header-cell-cushion {
+        font-size: 11px;
+      }
+
+      .fc .fc-timegrid-slot-label-cushion {
+          font-size: 14px;
+      }
+
+      .fc .fc-timegrid-axis-cushion {
+          font-size: 15px;
+      }
+
+}
+
+@media only screen and (max-width: 505px) and (min-width: 341px) {
+    .header {
+        justify-content: center;
+    }
+
+    .header-input {
+        margin-right: 0px;
+    }
+
+    .header-Name {
+        display: none;
+    }
+
+    .container-input .fa-plus-circle {
+        display: none;
+    }
+
+    .container-input .fa-bell {
+        display: none;
+    }
+
+    aside {
+        display: none;
+    }
+
+    .Container-calendar {
+        width: 325px;
+    }
+
+    .fc .fc-toolbar.fc-header-toolbar {
+        flex-direction: column;
+      }
+ 
+}
+
+@media only screen and (max-width: 645px) and (min-width: 505px) {
+
+    aside {
+        display: none;
+    }
+
+    .fc .fc-button-primary {
+        margin-top: 10px;
+    }
+
+    .Container-calendar {
+        width: 490px;
+    }
+
+}
+
+@media only screen and (max-width: 830px) and (min-width: 600px) { 
+    aside {
+        display: none;
+    }
+
+    .Container-calendar {
+        width: 620px;
+    }
+}
+
+@media only screen and (max-width: 1075px) and (min-width: 800px) { 
+
+    aside {
+        width: 150px;
+    }
+
+    .aside-list ul .help {
+        margin-top: 260px;
+    }
+
+    .Container-calendar {
+        width: 635px;
+    }
+    
+}
